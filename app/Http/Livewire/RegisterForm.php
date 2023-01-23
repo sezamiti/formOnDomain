@@ -31,16 +31,16 @@ class RegisterForm extends Component
 
 
     protected $rules = [
-        'nameOrganization' => 'required|regex:/[0-9a-zA-Zа-яА-ЯЁёҚқӘәҺһІіҢңҒғҰұӨө\s]/ui',
-        'legalAdress' => 'required|regex:/[0-9a-zA-Zа-яА-ЯЁёҚқӘәҺһІіҢңҒғҰұӨө\s]/ui',
+        'nameOrganization' => 'required|required|regex:/^[-0-9a-zA-Zа-яА-ЯЁёҚқӘәҺһІіҢңҒғҰұӨө«»,.#\№"@&()\s]+$/u',
+        'legalAdress' => 'required|required|regex:/^[-0-9a-zA-Zа-яА-ЯЁёҚқӘәҺһІіҢңҒғҰұӨө«»,.#\№"@&()\s]+$/u',
         'postcode' => 'required|numeric',
         'number' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/',
         'email' => 'required|email',
-        'bankName' => 'required|regex:/[0-9a-zA-Zа-яА-ЯЁёҚқӘәҺһІіҢңҒғҰұӨө\s]/ui',
+        'bankName' => 'required|required|regex:/^[-0-9a-zA-Zа-яА-ЯЁёҚқӘәҺһІіҢңҒғҰұӨө«»,.#\№"@&()\s]+$/u',
         'bin' => 'required|digits:12',
         'bik' => 'required|min:8',
         'iik' => 'required|min:20',
-        'responsPerson' => 'required|regex:/[a-zA-Zа-яА-ЯЁёҚқӘәҺһІіҢңҒғҰұӨө\s]/ui',
+        'responsPerson' => 'required|required|regex:/^[-0-9a-zA-Zа-яА-ЯЁёҚқӘәҺһІіҢңҒғҰұӨө«»,.#\№"@&()\s]+$/u',
         'responsnumber' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/',
         'responsemail' => 'required|email',
         'name' => 'required|regex:/[a-zA-Zа-яА-ЯЁёҚқӘәҺһІіҢңҒғҰұӨө\s]/ui',
